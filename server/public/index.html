@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/logo.svg" />
+    <title>Lectrify</title>
+
+    <!-- outfit -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/codePage.css" />
+    <link rel="stylesheet" href="styles/quizPage.css" />
+
+    <script type="module" src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <!-- enter code page -->
+    <div
+      id="enter-code-page"
+      class="hidden column-flex-center"
+      style="gap: 1.5em"
+    >
+      <div style="padding-top: 10px"></div>
+
+      <!-- title -->
+      <div
+        class="page-header-center"
+        style="display: flex; flex-direction: row; align-items: center"
+      >
+        <img src="assets/logo.svg" style="width: 64px; height: 64px" />
+        <h1
+          style="
+            font-size: 50px;
+            font-weight: 900;
+            margin-left: 10px;
+            vertical-align: center;
+          "
+        >
+          Lectrify
+        </h1>
+      </div>
+
+      <div style="padding-top: 40px"></div>
+
+      <form id="enter-code-form" class="column-flex-center" style="gap: 1em">
+        <input
+          type="text"
+          id="code-input"
+          class="input inner-border"
+          name="code"
+          placeholder="Code"
+          autocomplete="off"
+        />
+        <button type="submit" class="big-button primary" id="code-submit">
+          Enter !
+        </button>
+      </form>
+
+      <div style="padding-top: 40px"></div>
+
+      <!-- sponsors -->
+      <!-- <div class="column-flex-center" style="gap: 30px">
+        <a> Sponsored By </a>
+        <img
+          class="sponsor"
+          src="assets/sponsor_2.png"
+          style="width: 150px; height: 42px"
+        />
+
+        <img
+          class="sponsor"
+          src="assets/sponsor_1.png"
+          style="width: 160px; height: 42px"
+        />
+      </div> -->
+    </div>
+
+    <!-- quiz page -->
+    <div id="quiz-page-container" class="hidden" style="height: 95vh">
+      <!-- title -->
+      <div class="row-flex-center">
+        <div class="quiz-navigate phone-only" id="go-left-ph">
+          <span class="material-icons nav-icon">
+            keyboard_double_arrow_left
+          </span>
+        </div>
+
+        <img src="assets/logo.svg" id="quiz-logo-image" />
+        <h1 id="quiz-logo-title">Lectrify</h1>
+
+        <div style="flex-grow: 1"></div>
+
+        <div id="quiz-code"></div>
+
+        <div class="quiz-navigate phone-only" id="go-right-ph">
+          <span class="material-icons nav-icon">
+            keyboard_double_arrow_right
+          </span>
+        </div>
+      </div>
+
+      <div id="quiz-title">Quiz title</div>
+
+      <div id="header-quiz-divider"></div>
+
+      <!-- progress bar phone -->
+      <div
+        id="phone-progress-box"
+        class="row-flex-center progress-numbers hidden"
+      >
+        <div id="got-right-count-ph">0</div>
+        <div id="progress-bar-ph"></div>
+        <div id="got-wrong-count-ph">0</div>
+      </div>
+
+      <div id="question-container" class="column-flex-center">
+        <!-- question space -->
+        <div class="row-flex-center" style="align-items: start">
+          <div class="quiz-navigate laptop-only" id="go-left">
+            <span class="material-icons nav-icon">
+              keyboard_double_arrow_left
+            </span>
+          </div>
+
+          <div id="quiz-question" class="styled-box primary-box hidden"></div>
+
+          <div class="quiz-navigate laptop-only" id="go-right">
+            <span class="material-icons nav-icon">
+              keyboard_double_arrow_right
+            </span>
+          </div>
+        </div>
+
+        <div style="padding-top: 2.5em"></div>
+
+        <!-- options space -->
+        <div
+          id="quiz-answers"
+          class="column-flex-center hidden"
+          style="gap: 1em"
+        ></div>
+
+        <div id="waiting-box" class="styled-box">
+          <div class="container-icon">?</div>
+          <div class="container-title">Waiting for questions...</div>
+        </div>
+      </div>
+
+      <!-- progress bar laptop -->
+      <div style="flex-grow: 1"></div>
+      <div id="progress-box" class="column-flex-center hidden">
+        <div id="progress-bar"></div>
+        <div class="row-flex-center progress-numbers" style="gap: 2em">
+          <div class="row-flex-center" style="gap: 0.3em">
+            <div id="got-right-count">0</div>
+            right
+          </div>
+          <div class="row-flex-center" style="gap: 0.3em">
+            <div id="got-wrong-count">0</div>
+            wrong
+          </div>
+          <div class="row-flex-center" style="gap: 0.3em">
+            <div id="todo-count">0</div>
+            todo
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </body>
+</html>
